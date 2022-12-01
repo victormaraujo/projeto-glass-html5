@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
-ul#album-fotos {
+
+
+ul#album-foto {
     width: 700px;
     margin: 0 auto;
     padding: 50px;
@@ -10,7 +12,7 @@ ul#album-fotos {
 
 }
 
-ul#album-fotos li {
+ul#album-foto li {
     float: left;
     width: 200px;
     height: 200px;
@@ -20,6 +22,105 @@ ul#album-fotos li {
     box-shadow: 1px 1px 3px rgba(0, 0, 0,.4);
 }
 
-ul#album-fotos li#foto01 {
-    background: url('../imagens/galeria-01.jpg')
+#foto01 {
+   background-image: url("C:/Users/Hipopet/Desktop/CURSO DE HTML/projeto-glass-html5/_imagens/galeria-01.jpg");
+   background-position: 50% 50%;
+   background-size: 400px 400px;
+   background-color: #ffffff;
+}
+
+ul#album-foto li#foto01:hover {
+
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+#foto02 {
+    background-image: url("C:/Users/Hipopet/Desktop/CURSO DE HTML/projeto-glass-html5/_imagens/galeria-02.jpg");
+    background-position: 50% 50%;
+   background-size: 400px 400px;
+   background-color: #ffffff;
+
+}
+
+ul#album-foto li#foto02:hover {
+
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+#foto03 {
+    background-image: url("C:/Users/Hipopet/Desktop/CURSO DE HTML/projeto-glass-html5/_imagens/galeria-03.jpg");
+    background-position: 50% 50%;
+   background-size: 400px 400px;
+   background-color: #ffffff;
+
+}
+
+ul#album-foto li#foto03:hover {
+
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+#foto04 {
+    background-image: url("C:/Users/Hipopet/Desktop/CURSO DE HTML/projeto-glass-html5/_imagens/galeria-04.jpg");
+    background-position: 50% 50%;
+   background-size: 400px 400px;
+   background-color: #ffffff;
+
+}
+
+ul#album-foto li#foto04:hover {
+
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+#foto05 {
+    background-image: url("C:/Users/Hipopet/Desktop/CURSO DE HTML/projeto-glass-html5/_imagens/galeria-05.jpg");
+    background-position: 50% 50%;
+   background-size: 400px 400px;
+   background-color: #ffffff;
+
+}
+
+ul#album-foto li#foto05:hover {
+
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+#foto06 {
+    background-image: url("C:/Users/Hipopet/Desktop/CURSO DE HTML/projeto-glass-html5/_imagens/galeria-06.jpg");
+    background-position: 50% 50%;
+   background-size: 400px 400px;
+   background-color: #ffffff;
+
+}
+
+ul#album-foto li#foto06:hover {
+
+    background-position: 0px 0px;
+    background-size: 200px 200px;
+}
+
+ul#album-foto li span {
+
+    opacity: 0;
+    color: #ffffff;
+    text-shadow: black;
+    background-color: rgba(0, 0, 0,.3);
+    font-size: 9pt;
+    line-height: 370px;
+    padding: 5px;
+}
+
+ul#album-foto li:hover {
+    transform: scale(1.5);
+    transition: all 0.4s ease-in;
+}
+
+ul#album-foto li:hover span {
+    opacity: 1;
 }
