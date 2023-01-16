@@ -10,6 +10,13 @@
 
 </head>
 <script language="javascript" src="_javascript/funcoes.js"></script>
+<script>
+    function calc_total() {
+        var qtd = parseInt(document.getElementById('cqtd').ariaValueNow);
+        tot = + 1500;
+        document.getElementById('ctot').ariaValueNow = tot;
+    }
+</script>
 
 <body>
 
@@ -56,40 +63,64 @@
 
 
 
-<form>
+<form method="post" id="fcontato" action="mailto:contato@cursoemvideo" oninput="cal_total();">
     
    <fieldset id="usuario"><legend>Identificação do Usuário</legend>
     <p>Nome: <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"></p>
     <p> Senha: <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
-    <p> E-mail:</p>
+    <p> E-mail: <input type="email" name="tmail" id="cmail" size="20" maxlength="40" placeholder="Email"/></p>
 
    <fieldset id="sexo"><legend>Sexo</legend>
-        - Masculino
-        - Feminino</fieldset>
-   <p> Data de Nascimento:</p>
+        <input type="radio" name="tsexo" id="cmasc"><label for="cmasc"> Masculino</label><br/>
+        <input type="radio" name="tsexo" id="cfem"> <label for="cfem">Feminino</label></fieldset>
+   <p> Data de Nascimento: <input type="date" name="tnasc" id="cnasc"></p>
 </fieldset>
 
 <fieldset id="endereco"><legend>Endereço do Usuário</legend>
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+    <p>Logradouro: <input type="text" name="trua" id="crua" size="13" maxlength="80" placeholder="Rua, Av, Trav..."></p>
+    <p>Número: <input type="number" name="tnum" id="cnum" min="0" max="99999"></p>
+    <p><label for="cest"> Estado:</label>
+    <select name="test" id="cest">
+        <option>Rio de Janeiro</option>
+        <option>São Paulo</option>
+        <option>Mato Grosso</option>
+        <option>Rio Grande do Sul</option>
+        <option>Acre</option>
+        <option>Nordeste</option>
+        <option>Minas Gerais</option>
+        <option>Para</option>
+    </select></p>
+    <p><label for="ccid">Cidade:</label>
+    <input type="text" name="tcid" id="ccid" maxlength="40" size="20" placeholder="Sua Cidade" list="Cidades"></p>
+    <datalist id="Cidades">
+        <option value="Rio de janeiro"></option>
+        <option value="Nova Iguaçu"></option>
+        <option value="Niterói"></option>
+        <option value="Belford roxo"></option>
+    </datalist>
 </fieldset>
 
     <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
-    Grau de Urgência:
-    Mensagem:
+    <p><label for="curg">Grau de Urgência: Min </label>
+    <input type="range" name="turg" id="curg" min="0" max="10" step="2"/>Max</p>
+   <p><label for="cmsg">Mensagem: </label>
+<textarea name="tmsg" id="cmsg" cols="45" rows="5" placeholder="Deixe Aqui Sua Mensagem"></textarea></p>
 </fieldset>
 
 <fieldset id="pedido"><legend>Quero um Google Glass</legend>
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
+    <p><input type="checkbox" name="tped" id="cped">
+        <label for="cped"> Gostaria de adquirir um Google Glass quando disponível</label></p>
+        <p><label for="ccor">  Cor:</label>
+        <input type="color" name="tcor" id="ccor"></p>
+            <p><label for="cqtd">  Quantidade:</label>
+            <input type="number" name="tqtd" id="cqtd" min="0" max="5" value="0"></p>
+                <p><label for="ctot"> Preço Total: R$</label>
+                <input type="text" name="ttot" id="ctot" placeholder="Total a Pagar" readonly></p>
 </fieldset>
 
 
-[BOTÃO ENVIAR]</form>
+<input type="submit" value="Enviar">
+</form>
 
 <footer id="rodape">
     <p>Copyright© 2013 - by Gustavo Guanabara <br/>
